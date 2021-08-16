@@ -5,10 +5,7 @@ import styles from './Filter.module.css';
 const Filter = () => {
   const dispatch = useDispatch();
   const filter = useSelector(contactsSelectors.getFilter);
-  const contacts = useSelector(contactsSelectors.getContacts);
 
-  if (!contacts.length)
-    return <p>Your phonebook is empty. Please add contact.</p>;
   return (
     <label className={styles.Label}>
       Find contacts by name
